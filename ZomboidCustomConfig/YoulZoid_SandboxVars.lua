@@ -557,4 +557,21 @@ SandboxVars = {
         -- How close members of a group stay to the group's leader. Minimum=1 Maximum=10 Default=3
         RallyGroupRadius = 3,
     },
+    ProgressiveCharacterMod = {
+        -- Minimum=1 Maximum=999 Default=2
+        IntervalOfDaysPassed = 2,
+        -- Minimum=1 Maximum=999 Default=1
+        NumberOfPointsToAdd = 1,
+        -- Minimum=0 Maximum=999 Default=0
+        MinDaysSurvived = 0,
+        DeathResets = false,
+    },
+    BecomeDesensitized = {
+        -- Minimum=1 Maximum=10000 Default=500
+        MinimumZombieKills = 500,
+        -- Minimum=1 Maximum=10000 Default=2000
+        MaximumZombieKills = 2000,
+        ConsiderTraits = true,
+        ConsiderOccupations = true,
+    },
 }

@@ -10,6 +10,7 @@ bash:
 .PHONY: deploy
 deploy:
 	docker-compose up -d
+	sudo chown -R 1000:1000 ZomboidConfig
 
 .PHONY: undeploy
 undeploy:

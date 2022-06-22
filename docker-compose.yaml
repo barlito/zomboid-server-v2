@@ -31,12 +31,12 @@ services:
       - "GAME_VERSION=public"
       - "MAX_PLAYERS=5"
       - "MAX_RAM=4096m"
-      - "MOD_NAMES="
-      - "MOD_WORKSHOP_IDS="
+      - "MOD_NAMES=ProgressiveCharacterMod;BecomeDesensitized;RavenCreek;BedfordFalls"
+      - "MOD_WORKSHOP_IDS=2659093221;2627877543;2196102849;522891356"
       - "NO_CHOWN_CONFIG_DIR=false"
       - "NO_CHOWN_GAME_DIR=false"
       - "PAUSE_ON_EMPTY=true"
-      - "PUBLIC_SERVER=false"
+      - "PUBLIC_SERVER=true"
       - "QUERY_PORT=16261"
       - "SERVER_NAME=YoulZoid"
       - "SERVER_PASSWORD=veliveli"
@@ -52,3 +52,12 @@ services:
     volumes:
       - ./ZomboidDedicatedServer:/home/steam/ZomboidDedicatedServer
       - ./ZomboidConfig:/home/steam/Zomboid/
+      - type: bind
+        source: ./ZomboidCustomConfig/YoulZoid.ini
+        target: /home/steam/Zomboid/Server/YoulZoid.ini
+      - type: bind
+        source: ./ZomboidCustomConfig/YoulZoid_SandboxVars.lua
+        target: /home/steam/Zomboid/Server/YoulZoid_SandboxVars.lua
+      - type: bind
+        source: ./ZomboidCustomConfig/YoulZoid_spawnregions.lua
+        target: /home/steam/Zomboid/Server/YoulZoid_spawnregions.lua
