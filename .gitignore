@@ -1,0 +1,8 @@
+### IDE
+.idea
+
+### Server files
+ZomboidConfig/*
+!ZomboidConfig/.gitkeep
+ZomboidDedicatedServer/*
+!ZomboidDedicatedServer/.gitkeep
