@@ -6,7 +6,7 @@ SandboxVars = {
     -- 3 = High
     -- 4 = Normal
     -- 5 = Low
-    Zombies = 3,
+    Zombies = 4,
     -- 1 = Urban Focused
     Distribution = 1,
     -- 1 = 15 Minutes
@@ -65,7 +65,7 @@ SandboxVars = {
     -- 5 = 0-1 Year
     -- 6 = 0-5 Years
     -- 7 = 2-6 Months
-    WaterShut = 2,
+    WaterShut = 7,
     -- 1 = Instant
     -- 2 = 0-30 Days
     -- 3 = 0-2 Months
@@ -73,7 +73,7 @@ SandboxVars = {
     -- 5 = 0-1 Year
     -- 6 = 0-5 Years
     -- 7 = 2-6 Months
-    ElecShut = 2,
+    ElecShut = 7,
     -- Minimum=-1 Maximum=2147483647 Default=14
     WaterShutModifier = 14,
     -- Minimum=-1 Maximum=2147483647 Default=14
@@ -150,7 +150,7 @@ SandboxVars = {
     -- Number of days until 100% growth. -1 means no growth. Zero means use the Erosion Speed option. Maximum 36,500 (100 years). Minimum=-1 Maximum=36500 Default=0
     ErosionDays = 0,
     -- Modifies the base XP gain from actions by this number. Minimum=0.00 Maximum=1000.00 Default=1.00
-    XpMultiplier = 2.0,
+    XpMultiplier = 1.0,
     -- Use this to multiply or reduce engine general loudness. Minimum=0.00 Maximum=100.00 Default=1.00
     ZombieAttractionMultiplier = 1.0,
     -- Governs whether cars are locked, need keys to start etc.
@@ -443,7 +443,7 @@ SandboxVars = {
     -- Enables vehicles to spawn.
     EnableVehicles = true,
     Map = {
-        AllowMiniMap = false,
+        AllowMiniMap = true,
         AllowWorldMap = true,
         MapAllKnown = false,
     },
@@ -549,11 +549,11 @@ SandboxVars = {
         -- The distance a zombie will try to walk towards the last sound it heard. Minimum=10 Maximum=1000 Default=100
         FollowSoundDistance = 100,
         -- The size of groups real zombies form when idle. Zero means zombies don't form groups. Groups don't form inside buildings or forest zones. Minimum=0 Maximum=1000 Default=20
-        RallyGroupSize = 20,
+        RallyGroupSize = 1000,
         -- The distance real zombies travel to form groups when idle. Minimum=5 Maximum=50 Default=20
-        RallyTravelDistance = 20,
+        RallyTravelDistance = 50,
         -- The distance between zombie groups. Minimum=5 Maximum=25 Default=15
-        RallyGroupSeparation = 15,
+        RallyGroupSeparation = 5,
         -- How close members of a group stay to the group's leader. Minimum=1 Maximum=10 Default=3
         RallyGroupRadius = 3,
     },
