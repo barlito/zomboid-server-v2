@@ -34,7 +34,7 @@ SandboxVars = {
     -- 23 = 21 Hours
     -- 24 = 22 Hours
     -- 25 = 23 Hours
-    DayLength = 3,
+    DayLength = 5,
     StartYear = 1,
     -- 1 = January
     -- 2 = February
@@ -322,7 +322,7 @@ SandboxVars = {
     -- 2 = Long
     -- 3 = Normal
     -- 4 = Short
-    NightLength = 3,
+    NightLength = 4,
     -- Increase and decrease the impact injuries have on your body, and their healing time.
     -- 1 = Low
     -- 2 = Normal
