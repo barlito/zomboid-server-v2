@@ -42,6 +42,7 @@ services:
       - "SERVER_PASSWORD=veliveli"
       - "STEAM_VAC=true"
       - "USE_STEAM=true"
+      - "MAX_RAM=8192m"
     ports:
       - target: 8766
         published: 8766
