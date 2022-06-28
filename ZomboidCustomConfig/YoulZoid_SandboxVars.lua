@@ -370,7 +370,7 @@ SandboxVars = {
     RearVulnerability = 3,
     -- Disable to walk unimpeded while melee attacking.
     AttackBlockMovements = true,
-    AllClothesUnlocked = false,
+    AllClothesUnlocked = true,
     -- Governs how frequently cars are discovered on the map
     -- 1 = None
     -- 2 = Very Low
