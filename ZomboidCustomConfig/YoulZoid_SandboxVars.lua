@@ -557,6 +557,92 @@ SandboxVars = {
         -- How close members of a group stay to the group's leader. Minimum=1 Maximum=10 Default=3
         RallyGroupRadius = 3,
     },
+    BecomeDesensitized = {
+        -- Minimum=1 Maximum=10000 Default=500
+        MinimumZombieKills = 500,
+        -- Minimum=1 Maximum=10000 Default=2000
+        MaximumZombieKills = 2000,
+        ConsiderTraits = true,
+        ConsiderOccupations = true,
+    },
+    MoreTraits = {
+        -- Minimum=1 Maximum=999 Default=4
+        PreparedMedicalBandageAmount = 4,
+        PreparedCarGasToggle = true,
+        InjuredBurns = true,
+        AlcoholicFreeDrink = true,
+        SmokerStart = true,
+        -- Minimum=0 Maximum=200 Default=100
+        LuckImpact = 100,
+        -- Minimum=1 Maximum=720 Default=24
+        AlcoholicFrequency = 24,
+        -- Minimum=1 Maximum=720 Default=72
+        AlcoholicWithdrawal = 72,
+        -- Minimum=0 Maximum=90 Default=75
+        SpecializationXPPercent = 75,
+        -- Minimum=1 Maximum=100 Default=5
+        BouncerEffectiveness = 5,
+        -- Minimum=1 Maximum=240 Default=60
+        BouncerCooldown = 60,
+        -- Minimum=100 Maximum=1000 Default=200
+        GymGoerPercent = 200,
+        GymGoerNoExerciseFatigue = true,
+        -- Minimum=1 Maximum=30 Default=7
+        IndefatigableRecharge = 7,
+        IndefatigableCuresInfection = false,
+        IndefatigableCuresInfectionOnce = false,
+        -- Minimum=0 Maximum=1000 Default=100
+        GordaniteEffectiveness = 100,
+        -- Minimum=25 Maximum=1000 Default=100
+        MartialScaling = 100,
+        -- Minimum=0 Maximum=100 Default=33
+        EvasiveChance = 33,
+        -- Minimum=100 Maximum=10000 Default=2000
+        ButterfingersChance = 2000,
+        -- Minimum=1 Maximum=1000 Default=10
+        GraveRobberChance = 10,
+        -- Minimum=0 Maximum=10 Default=1
+        GraveRobberGuaranteedLoot = 1,
+        -- Minimum=1 Maximum=100 Default=20
+        ScroungerChance = 20,
+        -- Minimum=1 Maximum=100 Default=10
+        ScroungerItemChance = 10,
+        -- Minimum=10 Maximum=1000 Default=30
+        ScroungerLootModifier = 30,
+        -- Minimum=1 Maximum=100 Default=10
+        IncomprehensiveChance = 10,
+        -- Minimum=1 Maximum=100 Default=33
+        VagabondChance = 33,
+        -- Minimum=0 Maximum=10 Default=1
+        VagabondGuaranteedExtraLoot = 1,
+        -- Minimum=1 Maximum=100 Default=10
+        WeightPackMule = 10,
+        -- Minimum=1 Maximum=100 Default=6
+        WeightPackMouse = 6,
+        -- Minimum=1 Maximum=100 Default=8
+        WeightDefault = 8,
+        -- Minimum=-100 Maximum=100 Default=0
+        WeightGlobalMod = 0,
+        -- Minimum=1 Maximum=1000 Default=100
+        QuickWorkerScaler = 100,
+        -- Minimum=5 Maximum=50 Default=15
+        SlowWorkerScaler = 15,
+        IngenuitiveLimit = false,
+        -- Minimum=5 Maximum=95 Default=50
+        IngenuitiveLimitAmount = 50,
+        MartialWeapons = false,
+        -- Minimum=100 Maximum=10000 Default=1000
+        AntiqueChance = 1000,
+        ForgivingDeprived = false,
+        NonlethalAlcoholic = false,
+        -- Minimum=1 Maximum=30 Default=14
+        SecondWindCooldown = 14,
+        -- Minimum=10 Maximum=100 Default=50
+        HardyEndurance = 50,
+        SuperImmuneWeakness = false,
+        -- Minimum=0 Maximum=100 Default=25
+        ImmunoChance = 25,
+    },
     ProgressiveCharacterMod = {
         -- Minimum=1 Maximum=999 Default=2
         IntervalOfDaysPassed = 2,
@@ -565,13 +651,5 @@ SandboxVars = {
         -- Minimum=0 Maximum=999 Default=0
         MinDaysSurvived = 0,
         DeathResets = false,
-    },
-    BecomeDesensitized = {
-        -- Minimum=1 Maximum=10000 Default=500
-        MinimumZombieKills = 500,
-        -- Minimum=1 Maximum=10000 Default=2000
-        MaximumZombieKills = 2000,
-        ConsiderTraits = true,
-        ConsiderOccupations = true,
     },
 }
