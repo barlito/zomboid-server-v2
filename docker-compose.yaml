@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   zomboid-server:
-    image: renegademaster/zomboid-dedicated-server
+    image: renegademaster/zomboid-dedicated-server:1.6.1
     environment:
       - "ADMIN_PASSWORD=barlito"
       - "ADMIN_USERNAME=barlito"
@@ -12,8 +12,8 @@ services:
       - "GAME_VERSION=public"
       - "MAX_PLAYERS=5"
       - "MAX_RAM=8192m"
-      - "MOD_NAMES="
-      - "MOD_WORKSHOP_IDS="
+      - "MOD_NAMES=LitSortOGSN;BecomeDesensitized;BetterSortCC;improvedbuildmenu41;KillCount;modoptions;ToadTraits;ProgressiveCharacterMod;RainWash;tsarslib;TheStar;P4HasBeenRead;HTowTruck;RavenCreek;BedfordFalls;59meteor;ECTO1;67commando;74amgeneralM151A2;78amgeneralM35A2;78amgeneralM49A2C;78amgeneralM50A3;RS_WaterCistern;80kz1000;amclub;82oshkoshM911;83amgeneralM923;84merc;85merc;86oshkoshP19A;87cruiser;88golfMk2;88jettaMk2;89def110;89def90;90niva;91range;92amgeneralM998;1904952813;LitSortOGSN_readOnePage;LitSortOGSN_chocolate;LitSortOGSN_rice;LitSortOGSN_gold;LitSortOGSN_diamond;AquatsarYachtClub;Arsenal(26)GunFighter;autotsartrailers;ATA_Bus;Brita_2;Brita;CrashedCarsMod;FRUsedCarsNLF;FRUsedCarsNRN;FRUsedCars;GunSuicide;ModManager;ModManagerServer;ModTemplate;MoreDescriptionForTraits4166;RV_Interior_MP;RS_WaterCistern_FR_Overwrite;RS_WaterCistern_KI5_Addon;VVehicleEnhancer;1969FordMustangBoss429;Authentic Z - Current;AuthenticZBackpacks+;ATA_Jeep;ATA_Petyarbuilt;AxeOverhaul;VISIBLE_BACKPACK_BACKGROUND;Basements;betterLockpicking;ProfessionFrameworkB41Patch;Blackwood;CraftHelper41;Diederiks Tile Palooza;DylansTiles;FixedCraftableAxes;fuelsideindicator;Grapeseed;improvedbuildmenu41-1;improvedbuildmenu41-2;MinimalDisplayBars;moodle_quarters;ToadTraitsDynamic;NamedSkillVHSTapes;PaintYourRide;RedRacer;ReLght;fhqExpVehSpawn;fhqExpVehSpawnGageFarmDisable;fhqExpVehSpawnNoVanilla;fhqExpVehSpawnM911FarmDisable;fhqExpVehSpawnP19AFarmDisable;fhqExpVehSpawnRedRace;Visible Generators and Corpses;TMC_Trolley;tkTiles_01;fhqMotoriusZone;fhqMotoriusZoneRealNames;fhqMotoriusZoneImports;fhqMotoriusZoneExotics;fhqMotoriusZoneUSDM;BB_CommonSense;SpeedReading"
+      - "MOD_WORKSHOP_IDS=2071347174;2679338204;2627877543;2313387159;1969456967;2553809727;2169435993;1299328280;2659093221;2657661246;2392709985;2619072426;2685168362;2544353492;2292487242;2196102849;522891356;2772575623;2478247379;2785549133;2799152995;2719592131;2818847163;2778576730;2618213077;2811383142;2805630347;2469388752;2566953935;2489148104;2516123638;2522173579;2441990998;2443275640;2422681177;2409333430;2642541073;1904952813;2392987599;2297098490;2282429356;2592358528;2460154811;2200148440;1539281445;1510950729;2402057349;2694448564;2725216703;2822286426;2788428718;2273010892;2335368829;2636100523;2782258356;2808679062;2849247394;2368058459;2216760107;2536865912;2186592938;2337452747;2599752664;2684955236;2616986064;2463499011;2004998206;2854030563;2732294885;2281256511;2707344076;2780594299;2793164190;2809719515;2478768005;2384329562;2791656602;2875848298;1406668075"
       - "NO_CHOWN_CONFIG_DIR=false"
       - "NO_CHOWN_GAME_DIR=false"
       - "PAUSE_ON_EMPTY=true"
