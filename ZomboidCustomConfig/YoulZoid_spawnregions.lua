@@ -9,6 +9,6 @@ function SpawnRegions()
 		{ name = "South", file = "media/maps/South/spawnpoints.lua" },
 		{ name = "West", file = "media/maps/West/spawnpoints.lua" },
 		{ name = "RavenCreek", file = "media/maps/RavenCreek/spawnpoints.lua" },
-		{ name = "CustomYoul WestPoint", file = "YoulZoid_spawnpoints.lua" },
+		{ name = "CustomYoul WestPoint", serverfile = "YoulZoid_spawnpoints.lua" },
 	}
 end
