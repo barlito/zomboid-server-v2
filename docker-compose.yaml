@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   zomboid-server:
-    image: renegademaster/zomboid-dedicated-server
+    image: renegademaster/zomboid-dedicated-server:2.3.0
     environment:
       - "ADMIN_PASSWORD=barlito"
       - "ADMIN_USERNAME=barlito"
