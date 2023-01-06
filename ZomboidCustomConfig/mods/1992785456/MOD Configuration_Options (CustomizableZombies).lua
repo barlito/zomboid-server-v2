@@ -20,7 +20,7 @@ local obj1 = {
 		["HPMultiplier"] = 1000;
 	};
 	["Runner"] = {
-		["ChanceToSpawn"] = 2500;
+		["ChanceToSpawn"] = 200;
 		["HPMultiplier"] = 1000;
 	};
 	["Preset"] = {
