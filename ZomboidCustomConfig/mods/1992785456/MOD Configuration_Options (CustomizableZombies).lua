@@ -12,11 +12,11 @@ local obj1 = {
 		["HPMultiplier"] = 1000;
 	};
 	["Shambler"] = {
-		["ChanceToSpawn"] = 470;
+		["ChanceToSpawn"] = 375;
 		["HPMultiplier"] = 1000;
 	};
 	["FastShambler"] = {
-		["ChanceToSpawn"] = 470;
+		["ChanceToSpawn"] = 375;
 		["HPMultiplier"] = 1000;
 	};
 	["Runner"] = {
