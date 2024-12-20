@@ -6,22 +6,17 @@ services:
     environment:
       - ADMIN_USERNAME=${PZ_ADMIN_USERNAME}
       - ADMIN_PASSWORD=${PZ_ADMIN_PASSWORD}
+      - SERVER_PASSWORD=${PZ_SERVER_PASSWORD}
       - "AUTOSAVE_INTERVAL=5"
       - "BIND_IP=0.0.0.0"
-      - "GAME_PORT=8766"
       - "GAME_VERSION=public"
       - "MAX_PLAYERS=10"
       - "MAX_RAM=8192m"
-      - "MOD_NAMES="
-      - "MOD_WORKSHOP_IDS="
-      - "NO_CHOWN_CONFIG_DIR=false"
-      - "NO_CHOWN_GAME_DIR=false"
       - "PAUSE_ON_EMPTY=true"
-      - "PUBLIC_SERVER=true"
       - "QUERY_PORT=16261"
-      - "SERVER_NAME=YoulZoid"
-      - SERVER_PASSWORD=${PZ_SERVER_PASSWORD}
       - "STEAM_VAC=true"
+      - "DEFAULT_PORT=16261"
+      - "UDP_PORT=16262"
       - "USE_STEAM=true"
     ports:
       - target: 16261

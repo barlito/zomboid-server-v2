@@ -185,9 +185,9 @@ SandboxVars = {
     -- Number of days until 100% growth. -1 means no growth. Zero means use the Erosion Speed option. Maximum 36,500 (100 years). Minimum=-1 Maximum=36500 Default=0
     ErosionDays = 0,
     -- Modifies the base XP gain from actions by this number. Minimum=0.00 Maximum=1000.00 Default=1.00
-    XpMultiplier = 1.0,
+    XpMultiplier = 2.0,
     -- Determines if the XP multiplier affects passively levelled skills eg. Fitness and Strength.
-    XpMultiplierAffectsPassive = false,
+    XpMultiplierAffectsPassive = true,
     -- Use this to multiply or reduce engine general loudness. Minimum=0.00 Maximum=100.00 Default=1.00
     ZombieAttractionMultiplier = 1.0,
     -- Governs whether cars are locked, need keys to start etc.
@@ -356,7 +356,7 @@ SandboxVars = {
     -- 1 = Pitch Black
     -- 2 = Dark
     -- 3 = Normal
-    NightDarkness = 3,
+    NightDarkness = 1,
     -- Governs the time from dusk to dawn. Default=Normal
     -- 1 = Always Night
     -- 2 = Long
@@ -403,14 +403,14 @@ SandboxVars = {
     -- If disabled snow will not accumulate on ground but will still be visible on vegetation and rooftops.
     EnableSnowOnGround = true,
     -- When enabled certain melee weapons will be able to strike multiple zombies in one hit.
-    MultiHitZombies = false,
+    MultiHitZombies = true,
     -- Chance of being bitten when a zombie attacks from behind. Default=High
     -- 1 = Low
     -- 2 = Medium
-    RearVulnerability = 3,
+    RearVulnerability = 2,
     -- Disable to walk unimpeded while melee attacking.
     AttackBlockMovements = true,
-    AllClothesUnlocked = false,
+    AllClothesUnlocked = true,
     -- if disabled, tainted water will not have a warning marking it as such
     EnableTaintedWaterText = true,
     -- Governs how frequently cars are discovered on the map Default=Low
@@ -498,7 +498,7 @@ SandboxVars = {
     -- The higher the value, the longer lightbulbs last before breaking. If 0, lightbulbs will never break. Does not affect vehicle headlights. Minimum=0.00 Maximum=1000.00 Default=1.00
     LightBulbLifespan = 1.0,
     Map = {
-        AllowMiniMap = false,
+        AllowMiniMap = true,
         AllowWorldMap = true,
         MapAllKnown = false,
     },
@@ -507,12 +507,12 @@ SandboxVars = {
         -- 1 = Sprinters
         -- 2 = Fast Shamblers
         -- 3 = Shamblers
-        Speed = 2,
+        Speed = 4,
         -- Controls the damage zombies inflict per attack. Default=Normal
         -- 1 = Superhuman
         -- 2 = Normal
         -- 3 = Weak
-        Strength = 2,
+        Strength = 4,
         -- Controls the difficulty to kill zombies. Default=Normal
         -- 1 = Tough
         -- 2 = Normal
@@ -613,5 +613,88 @@ SandboxVars = {
         RallyGroupSeparation = 15,
         -- How close members of a group stay to the group's leader. Minimum=1 Maximum=10 Default=3
         RallyGroupRadius = 3,
+    },
+    BecomeDesensitized = {
+        -- Minimum zombie kills required to have a chance to become desensitized. Minimum=1 Maximum=10000 Par défaut=500
+        MinimumZombieKills = 500,
+        -- Maximum zombie kills required to become desensitized Minimum=1 Maximum=10000 Par défaut=2000
+        MaximumZombieKills = 2000,
+        -- Consider traits that can increase the chance of becoming desensitized (more info in workshop page)
+        ConsiderTraits = true,
+        -- Consider occupations Police, Fireman, Park Ranger, Security Guard, Doctor and Nurse that can increase the chance of becoming desensitized
+        ConsiderOccupations = true,
+    },
+    BetterBatteries = {
+        -- Temps nécessaire en minutes en jeu pour recharger entièrement une pile vide sans pénalité ou bonus. Minimum=0,00 Maximum=1440,00 Par défaut=60,00
+        CrankTime = 60.0,
+        -- Déterminer si oui ou non un haut niveau de force appliquera un bonus sur le temps.
+        StrengthBuff = true,
+        -- Déterminer si oui ou non un bas niveau d'endurance appliquera une pénalité de temps. (Malgré cette option, vous ne pourrez pas utiliser la manivelle à un très bas niveau d'endurance.)
+        EndurancePenalty = true,
+        -- Déterminer si oui ou non la tristesse appliquera une pénalité de temps.
+        UnhappinessPenalty = true,
+        -- Sets the maximum charge a handcrank can restore a battery to. Minimum=0,00 Maximum=1,00 Par défaut=1,00
+        MaximumCharge = 1.0,
+        -- Lifetime multiplier applied to all electrical devices that use batteries. (Negative value results in unlimited charge, 0 results in instant charge loss.) Minimum=-1,00 Maximum=9999,00 Par défaut=1,00
+        LifetimeMult = 1.0,
+    },
+    CommonSense = {
+        -- Active si les joueurs peuvent ouvrir les portes, les fenêtres, etc. à l'aide d'un levier.
+        PryingMechanic = true,
+        -- Toggles a custom User Interface that displays a gun's ammunition type, current ammo, state, etc.
+        GunStats = true,
+        -- Active les couleurs d'interface utilisateur conviviales pour les personnes atteintes de daltonisme.
+        ColorFilter = false,
+        -- Active si toutes les portes peuvent être forcées ou non.
+        -- Par défaut, les portes renforcées (portes de prison, portes de grille métallique, etc.) ne peuvent être forcées à moins que le joueur ait un niveau de Force égal ou supérieur au niveau minimum de porte renforcée.
+        PryAllDoors = false,
+        -- Active si une couleur doit être affichée pour représenter l'état de diverses pièces du véhicule sur le tableau de bord du véhicule.
+        PartsHighlighter = true,
+        -- Détermine si les joueurs peuvent accidentellement briser les vitres des portes du véhicule lorsqu'ils échouent à les forcer.
+        -- Si activé, cela peut se produire aléatoirement (en fonction du paramètre de Chance de Briser Vitre).
+        ShatterVehicleWindows = true,
+        -- Détermine le niveau minimum de Force auquel les joueurs peuvent forcer les portes renforcées (portes de prison, portes de grille métallique, etc.) Minimum=0 Maximum=10 Par défaut=8
+        ReinforcedDoorLevel = 8,
+        -- Détermine la chance de casser le verre d'une fenêtre lorsqu'un joueur échoue à une tentative de la forcer. Minimum=0 Maximum=100 Par défaut=20
+        WindowShatterChance = 20,
+        -- Détermine la difficulté de forcer des objets avec un levier.
+        -- Un multiplicateur plus élevé rend plus difficile de forcer des objets avec succès, tandis qu'un multiplicateur plus bas le rend plus facile.
+        -- 0 = Toujours réussi.
+        -- 1 = Difficulté par défaut.
+        -- 5 = Difficulté maximale. Minimum=0,00 Maximum=5,00 Par défaut=1,00
+        PryingChanceMultiplier = 1.0,
+        -- Détermine la chance d'être blessé si un joueur ne parvient pas à ouvrir une boîte de conserve avec un outil improvisé. Minimum=0 Maximum=100 Par défaut=10
+        CanWoundChance = 10,
+        -- Multiplie les dégâts infligés à un joueur lorsqu'il ne parvient pas à ouvrir une boîte de conserve avec un outil improvisé.
+        -- Peut être utilisé pour réduire ou augmenter les dégâts à votre guise. Minimum=0,00 Maximum=10,00 Par défaut=1,00
+        CanWoundIntensity = 1.0,
+    },
+    KillCount = {
+        -- May provoke stutters.
+        doExport = false,
+        -- Includes all kills into the final value in Post Death floating text.
+        includePostDeathUI = true,
+        -- Target time (in milliseconds) between two updates in multiplayer. Small value gives reactivity. High value reduces network use and server workload. Minimum=0 Maximum=10000000 Par défaut=500
+        MaxUpdateDelay = 500,
+        -- Each client can see every character score. Deactivate on (very large) servers to reduce Global Mod Data transfer load.
+        shareOnServer = true,
+        -- Dead characters are kept and count toward server kills. Deactivate for server that never wipe.
+        keepTrackOfDead = true,
+    },
+    ProgressiveCharacterMod = {
+        -- How often you get the specified number of trait points. Minimum=1 Maximum=999 Par défaut=2
+        IntervalOfDaysPassed = 2,
+        -- How many trait points you get each time it accumulates. Minimum=1 Maximum=999 Par défaut=1
+        NumberOfPointsToAdd = 1,
+        -- How many days needed to survive to get the free point bonus. Minimum=0 Maximum=999 Par défaut=0
+        MinDaysSurvived = 0,
+        -- This Will Determine If After Initial Character Creation Your Point Total Resets.
+        DeathResets = false,
+    },
+    RVInterior = {
+        -- Les zombies Ã  cette distance ou plus prÃ¨s d'un joueur l'empÃªcheront d'entrer dans l'intÃ©rieur du vÃ©hicule (0 = dÃ©sactivÃ©). Minimum=0 Maximum=100 Par défaut=20
+        SafeZombieDistance = 20,
+        -- Les zombies qui poursuivent actuellement le joueur l'empÃªcheront d'entrer dans l'intÃ©rieur du vÃ©hicule, quelle que soit la distance.
+        NotWhenChased = true,
     },
 }
