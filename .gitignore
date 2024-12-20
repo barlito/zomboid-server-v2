@@ -1,6 +1,9 @@
 ### IDE
 .idea
 
+### Env
+.env
+
 ### Server files
 ZomboidConfig/*
 !ZomboidConfig/.gitkeep

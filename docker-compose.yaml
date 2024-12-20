@@ -2,15 +2,15 @@ version: "3.8"
 
 services:
   zomboid-server:
-    image: renegademaster/zomboid-dedicated-server:2.3.0
+    image: renegademaster/zomboid-dedicated-server:2.5.0
     environment:
-      - "ADMIN_PASSWORD=barlito"
-      - "ADMIN_USERNAME=barlito"
+      - ADMIN_USERNAME=${PZ_ADMIN_USERNAME}
+      - ADMIN_PASSWORD=${PZ_ADMIN_PASSWORD}
       - "AUTOSAVE_INTERVAL=5"
       - "BIND_IP=0.0.0.0"
       - "GAME_PORT=8766"
       - "GAME_VERSION=public"
-      - "MAX_PLAYERS=5"
+      - "MAX_PLAYERS=10"
       - "MAX_RAM=8192m"
       - "MOD_NAMES="
       - "MOD_WORKSHOP_IDS="
@@ -20,7 +20,7 @@ services:
       - "PUBLIC_SERVER=true"
       - "QUERY_PORT=16261"
       - "SERVER_NAME=YoulZoid"
-      - "SERVER_PASSWORD=veliveli"
+      - SERVER_PASSWORD=${PZ_SERVER_PASSWORD}
       - "STEAM_VAC=true"
       - "USE_STEAM=true"
     ports:
@@ -36,15 +36,16 @@ services:
     volumes:
       - ./ZomboidDedicatedServer:/home/steam/ZomboidDedicatedServer
       - ./ZomboidConfig:/home/steam/Zomboid/
-      - type: bind
-        source: ./ZomboidCustomConfig/YoulZoid.ini
-        target: /home/steam/Zomboid/Server/YoulZoid.ini
-      - type: bind
-        source: ./ZomboidCustomConfig/YoulZoid_SandboxVars.lua
-        target: /home/steam/Zomboid/Server/YoulZoid_SandboxVars.lua
-      - type: bind
-        source: ./ZomboidCustomConfig/YoulZoid_spawnpoints.lua
-        target: /home/steam/Zomboid/Server/YoulZoid_spawnpoints.lua
-      - type: bind
-        source: ./ZomboidCustomConfig/YoulZoid_spawnregions.lua
-        target: /home/steam/Zomboid/Server/YoulZoid_spawnregions.lua
+      - ./ZomboidCustomConfig:/home/steam/ZomboidCustomConfig/
+#      - type: bind
+#        source: ./ZomboidCustomConfig/YoulZoid.ini
+#        target: /home/steam/Zomboid/Server/YoulZoid.ini
+#      - type: bind
+#        source: ./ZomboidCustomConfig/YoulZoid_SandboxVars.lua
+#        target: /home/steam/Zomboid/Server/YoulZoid_SandboxVars.lua
+#      - type: bind
+#        source: ./ZomboidCustomConfig/YoulZoid_spawnpoints.lua
+#        target: /home/steam/Zomboid/Server/YoulZoid_spawnpoints.lua
+#      - type: bind
+#        source: ./ZomboidCustomConfig/YoulZoid_spawnregions.lua
+#        target: /home/steam/Zomboid/Server/YoulZoid_spawnregions.lua
